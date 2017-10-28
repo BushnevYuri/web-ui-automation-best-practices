@@ -2,6 +2,7 @@ package pageobject.pages;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
@@ -27,5 +28,9 @@ public class HomePage extends PageObject {
 
     public void waitUntilPageLoaded(){
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(MAIN_HEADING_LABEL);
+    }
+
+    public String getHeadingText(){
+        return $(MAIN_HEADING_LABEL).getText();
     }
 }
