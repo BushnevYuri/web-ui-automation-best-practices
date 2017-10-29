@@ -1,5 +1,6 @@
 package ui.pageobject;
 
+import common.City;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.WithTag;
@@ -10,6 +11,9 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import pageobject.pages.FlightsPage;
 import pageobject.pages.HomePage;
+
+import static common.City.Boston;
+import static common.City.NewYork;
 
 @RunWith(SerenityRunner.class)
 @WithTags({
@@ -22,14 +26,14 @@ public class FindFlightsSimplePageObjectExampleTest {
     @Managed FlightsPage flightsPage;
 
     @Test
-    public void test(){
+    public void userShouldBeAbleToFindFlightsFromBostonToNewYork(){
         homePage.open();
         homePage.waitUntilPageLoaded();
 
         Assert.assertEquals(homePage.getTitle(), "BlazeDemo");
         Assert.assertEquals(homePage.getHeadingText(), "Welcome to the Simple Travel Agency!");
 
-        homePage.findFlights("Boston", "New York");
+        homePage.findFlights(Boston, NewYork);
         Assert.assertTrue(flightsPage.getFlights().size() > 0);
     }
 }

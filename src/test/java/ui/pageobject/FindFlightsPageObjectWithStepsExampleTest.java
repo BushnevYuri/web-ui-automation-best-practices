@@ -1,5 +1,6 @@
 package ui.pageobject;
 
+import common.City;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -9,6 +10,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import pageobject.steps.FlightsSearchSteps;
+
+import static common.City.Boston;
+import static common.City.NewYork;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -34,7 +38,7 @@ public class FindFlightsPageObjectWithStepsExampleTest {
         yuri.verifyThatTitleAndHadingTextIsCorrect();
 
         //WHEN
-        yuri.searchFlightsBetween("Boston", "New York");
+        yuri.searchFlightsBetween(Boston, NewYork);
         //THEN
         assertThat(yuri.foundFlights().size(), greaterThan(0));
     }

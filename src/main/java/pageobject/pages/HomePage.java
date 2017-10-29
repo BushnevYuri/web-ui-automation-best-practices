@@ -1,5 +1,6 @@
 package pageobject.pages;
 
+import common.City;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebElement;
@@ -19,9 +20,9 @@ public class HomePage extends PageObject {
     /*
         ACTIONS
      */
-    public FlightsPage findFlights(String from, String to){
-        $(FLIGHT_FROM_SELECTOR).selectByValue(from);
-        $(FLIGHT_TO_SELECTOR).selectByValue(to);
+    public FlightsPage findFlights(City from, City to){
+        $(FLIGHT_FROM_SELECTOR).selectByValue(from.getFullName());
+        $(FLIGHT_TO_SELECTOR).selectByValue(to.getFullName());
         $(SEARCH_FLIGHT_BUTTON).click();
         return new FlightsPage();
     }

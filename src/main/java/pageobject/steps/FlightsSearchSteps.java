@@ -1,5 +1,6 @@
 package pageobject.steps;
 
+import common.City;
 import pageobject.pages.FlightsPage;
 import pageobject.pages.HomePage;
 import net.thucydides.core.annotations.Step;
@@ -11,7 +12,7 @@ public class FlightsSearchSteps extends BaseSteps {
     private FlightsPage flightsPage;
 
     @Step
-    public FlightsPage searchFlightsBetween(String from, String to) {
+    public FlightsPage searchFlightsBetween(City from, City to) {
         homePage.findFlights(from, to);
         return new FlightsPage();
     }

@@ -1,5 +1,6 @@
 package ui.screenplay;
 
+import common.City;
 import common.RegularUser;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
@@ -49,7 +50,7 @@ public class FindFlightsScreenPlayExampleTest {
         );
 
         when(yuri).attemptsTo(
-                SearchFlights.betweenCountries("Boston","New York")
+                SearchFlights.betweenCountries(City.Boston,City.NewYork)
         );
 
         then(yuri).should(

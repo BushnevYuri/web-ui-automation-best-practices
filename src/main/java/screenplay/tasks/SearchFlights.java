@@ -1,5 +1,6 @@
 package screenplay.tasks;
 
+import common.City;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -22,7 +23,7 @@ public class SearchFlights implements Task {
         );
     }
 
-    public static SearchFlights betweenCountries(String from, String to) {
+    public static SearchFlights betweenCountries(City from, City to) {
         return instrumented(SearchFlights.class,  from, to);
     }
 

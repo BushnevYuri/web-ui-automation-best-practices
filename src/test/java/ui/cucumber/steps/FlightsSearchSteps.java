@@ -1,5 +1,6 @@
 package ui.cucumber.steps;
 
+import common.City;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -41,7 +42,7 @@ public class FlightsSearchSteps {
 
     @When("s?he search flights from (.*) to (.*)")
     public void searchFlightsBetween(String from, String to) {
-        theActorInTheSpotlight().attemptsTo(SearchFlights.betweenCountries("Boston","New York"));
+        theActorInTheSpotlight().attemptsTo(SearchFlights.betweenCountries(City.fromString(from),City.fromString(to)));
     }
 
     @Then("^(?:he|she) should find some flights$")
@@ -53,45 +54,4 @@ public class FlightsSearchSteps {
                 )
         );
     }
-
-
-
-
-//
-//
-//
-//
-//    @Given("^that (.*) has a todo list containing (.*)$")
-//    public void that_James_has_an_empty_todo_list(String actorName, List<String> items) throws Throwable {
-//        theActorCalled(actorName).wasAbleTo(Start.withATodoListContaining(items));
-//    }
-//
-//    @When("^s?he adds '(.*)' to (?:his|her|the) list$")
-//    public void adds_Buy_some_milk_to_his_list(String item) throws Throwable {
-//        theActorInTheSpotlight().attemptsTo(AddATodoItem.called(item));
-//    }
-//
-//
-//
-//    @Then("^s?he has completed the task called '(.*)'$")
-//    public void completes_task_called(String item) throws Throwable {
-//        theActorInTheSpotlight().attemptsTo(
-//                CompleteItem.called(item)
-//        );
-//    }
-//
-//    @When("s?he filters her list to show only (.*) tasks")
-//    public void filters_tasks_by(TodoStatusFilter status) {
-//        theActorInTheSpotlight().attemptsTo(FilterItems.toShow(status));
-//    }
-//
-//    @Then("^(.*)'s todo list should contain (.*)$")
-//    public void a_users_todo_list_should_contain(String actorName, List<String> expectedItems) throws Throwable {
-//        theActorCalled(actorName).should(seeThat(TheItems.displayed(), equalTo(expectedItems)));
-//    }
-//
-//    @Then("^'(.*)' should be recorded in (?:his|her|the) list$")
-//    public void item_should_be_recorded_in_the_list(String expectedItem) throws Throwable {
-//       theActorInTheSpotlight().should(seeThat(TheItems.displayed(), hasItem(expectedItem)));
-//    }
 }
