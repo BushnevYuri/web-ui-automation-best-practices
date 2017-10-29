@@ -2,6 +2,7 @@ package pageobject.steps;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
 import pageobject.pages.HomePage;
 
@@ -20,7 +21,9 @@ public class BaseSteps extends ScenarioSteps {
 
     @Step
     public void verifyThatTitleAndHadingTextIsCorrect() {
-        Assert.assertEquals(homePage.getTitle(), "BlazeDemo");
-        Assert.assertEquals(homePage.getHeadingText(), "Welcome to the Simple Travel Agency!");
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(homePage.getTitle()).isEqualTo("BlazeDemo");
+        softly.assertThat(homePage.getHeadingText()).isEqualTo("Welcome to the Simple Travel Agency!");
+        softly.assertAll();
     }
 }

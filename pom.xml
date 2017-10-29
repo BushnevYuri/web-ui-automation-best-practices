@@ -23,6 +23,7 @@
         <serenity.screenplay.version>1.1.26</serenity.screenplay.version>
         <webdriver.driver>chrome</webdriver.driver>
         <webdriver.maanger.version>1.7.2</webdriver.maanger.version>
+        <assertj.version>3.8.0</assertj.version>
     </properties>
 
     <dependencies>
@@ -70,6 +71,11 @@
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber</artifactId>
             <version>${serenity.cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
         </dependency>
     </dependencies>
     <build>
