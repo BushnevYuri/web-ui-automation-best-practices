@@ -17,7 +17,7 @@ import static org.hamcrest.Matchers.*;
         @WithTag("type:UI"),
         @WithTag("pattern:PageObject")
 })
-public class FindFlightsPageObjectExampleTest {
+public class FindFlightsPageObjectWithStepsExampleTest {
     @Managed WebDriver driver;
 
     @Steps
@@ -29,7 +29,9 @@ public class FindFlightsPageObjectExampleTest {
         //GIVEN
         yuri.openHomePage();
         //THEN
-        yuri.shouldSeeThatHomePageIsOpened();
+        yuri.verifySeeThatHomePageIsOpened();
+        //AND
+        yuri.verifyThatTitleAndHadingTextIsCorrect();
 
         //WHEN
         yuri.searchFlightsBetween("Boston", "New York");
