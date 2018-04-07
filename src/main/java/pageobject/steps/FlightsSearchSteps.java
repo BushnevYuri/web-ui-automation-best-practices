@@ -1,6 +1,6 @@
 package pageobject.steps;
 
-import common.City;
+import common.pojo.City;
 import pageobject.pages.FlightsPage;
 import pageobject.pages.HomePage;
 import net.thucydides.core.annotations.Step;

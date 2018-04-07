@@ -1,9 +1,8 @@
 package pageobject.pages;
 
-import common.City;
+import common.pojo.City;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
-import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 

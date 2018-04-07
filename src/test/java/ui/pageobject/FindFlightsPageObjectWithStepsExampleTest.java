@@ -1,6 +1,5 @@
 package ui.pageobject;
 
-import common.City;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -11,8 +10,8 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import pageobject.steps.FlightsSearchSteps;
 
-import static common.City.Boston;
-import static common.City.NewYork;
+import static common.pojo.City.Boston;
+import static common.pojo.City.NewYork;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 

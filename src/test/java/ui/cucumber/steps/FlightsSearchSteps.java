@@ -1,6 +1,6 @@
 package ui.cucumber.steps;
 
-import common.City;
+import common.pojo.City;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

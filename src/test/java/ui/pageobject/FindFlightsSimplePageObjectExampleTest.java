@@ -1,6 +1,5 @@
 package ui.pageobject;
 
-import common.City;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.WithTag;
@@ -12,8 +11,8 @@ import org.openqa.selenium.WebDriver;
 import pageobject.pages.FlightsPage;
 import pageobject.pages.HomePage;
 
-import static common.City.Boston;
-import static common.City.NewYork;
+import static common.pojo.City.Boston;
+import static common.pojo.City.NewYork;
 
 @RunWith(SerenityRunner.class)
 @WithTags({

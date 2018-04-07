@@ -1,6 +1,6 @@
 package ui.pageobject;
 
-import common.City;
+import common.pojo.City;
 import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.WithTag;
@@ -17,7 +17,7 @@ import pageobject.pages.HomePage;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static common.City.*;
+import static common.pojo.City.*;
 
 @RunWith(SerenityParameterizedRunner.class)
 @WithTags({

@@ -1,11 +1,11 @@
-package common;
+package common.framework;
 
 import java.util.Properties;
 
-public class BaseConfiguration {
-    Properties configFile;
+class BaseConfiguration {
+    private Properties configFile;
 
-    public BaseConfiguration()
+    BaseConfiguration()
     {
         configFile = new java.util.Properties();
 
@@ -16,9 +16,8 @@ public class BaseConfiguration {
         }
     }
 
-    public String getProperty(String key)
+    String getProperty(String key)
     {
-        String value = this.configFile.getProperty(key);
-        return value;
+        return this.configFile.getProperty(key);
     }
 }

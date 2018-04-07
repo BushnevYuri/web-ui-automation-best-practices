@@ -1,4 +1,4 @@
-package common;
+package common.pojo;
 
 import net.serenitybdd.screenplay.Actor;
 
