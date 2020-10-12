@@ -11,7 +11,7 @@
     <properties>
         <serenity.version>1.6.3</serenity.version>
         <serenity.cucumber.version>1.0.15</serenity.cucumber.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <slf4j.version>1.7.25</slf4j.version>
         <maven.failsafe.plugin.version>2.19.1</maven.failsafe.plugin.version>
         <maven.compiler.plugin>3.2</maven.compiler.plugin>
